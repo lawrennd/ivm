@@ -1,0 +1,432 @@
+ [k, rbfPart, linearPart, n2] = ardKernCompute(kern, x, x2)
+
+ k = ardKernDiagCompute(kern, x)
+
+ gX = ardKernDiagGradX(kern, x)
+
+ ardKernDisplay(kern)
+
+ kern = ardKernExpandParam(kern, params)
+
+ params = ardKernExtractParam(kern)
+
+ gX = ardKernGradX(kern, x, X2)
+
+ g = ardKernGradient(kern, x, covGrad)
+
+ kern = ardKernParamInit(kern)
+
+ k = biasKernCompute(kern, x, x2)
+
+ k = biasKernDiagCompute(kern, x)
+
+ gX = biasKernDiagGradX(kern, x)
+
+ biasKernDisplay(kern)
+
+ kern = biasKernExpandParam(kern, params)
+
+ params = biasKernExtractParam(kern)
+
+ gX = biasKernGradX(kern, x, X2)
+
+ g = biasKernGradient(kern, x, covGrad)
+
+ kern = biasKernParamInit(kern)
+
+ k = cmpndKernCompute(kern, x, x2)
+
+ k = cmpndKernDiagCompute(kern, x)
+
+ gX = cmpndKernDiagGradX(kern, x)
+
+ cmpndKernDisplay(kern)
+
+ kern = cmpndKernExpandParam(kern, params)
+
+ params = cmpndKernExtractParam(kern)
+
+ gX = cmpndKernGradX(kern, x, X2)
+
+ g = cmpndKernGradient(kern, x, covGrad)
+
+ kern = cmpndKernParamInit(kern)
+
+ L = cmpndLikelihood(noise, mu, varsigma, y)
+
+ L = cmpndLogLikelihood(noise, mu, varsigma, y)
+
+ cmpndNoiseDisplay(noise)
+
+ noise = cmpndNoiseExpandParam(noise, params)
+
+ params = cmpndNoiseExtractParam(noise)
+
+ [dlnZ_dmu, dlnZ_dvs] = cmpndNoiseGradVals(noise, mu, varsigma, y)
+
+ g = cmpndNoiseGradientParam(noise, mu, varsigma, y)
+
+ y = cmpndNoiseOut(noise, mu, varsigma)
+
+ noise = cmpndNoiseParamInit(noise, y)
+
+ kern = cmpndTieParameters(kern, paramsList)
+
+ delta = computeInfoChange(model, add)
+
+ g = covarianceGradient(invK, m)
+
+ y = cumGaussian(x)
+
+
+
+
+
+ y = expTransform(x, transform)
+
+ y = gaussOverDiffCumGaussian(x, xp, order)
+
+ L = gaussianLikelihood(noise, mu, varsigma, y)
+
+ L = gaussianLogLikelihood(noise, mu, varsigma, y)
+
+ gaussianNoiseDisplay(noise)
+
+ noise = gaussianNoiseExpandParam(noise, params)
+
+ [params, names] = gaussianNoiseExtractParam(noise)
+
+ [dlnZ_dmu, dlnZ_dvs] = gaussianNoiseGradVals(noise, mu, varsigma, y)
+
+ g = gaussianNoiseGradientParam(noise, mu, varsigma, y)
+
+ y = gaussianNoiseOut(noise, mu, varsigma)
+
+ noise = gaussianNoiseParamInit(noise, y)
+
+
+
+ y = gradLogCumGaussian(x)
+
+ y = invCumGaussian(x)
+
+ y = invLinearBound(x)
+
+ y=invsigmoid(x)
+
+ model = ivm(X, y, kernelType, noiseType, selectionCriterion, d)
+
+ model = ivmAddPoint(model, i)
+
+ [kern, noise, ivmInfo] = ivmDeconstruct(model, fileName)
+
+ ivmDisplay(model)
+
+ model = ivmInit(model, d)
+
+ L = ivmLikelihoods(model, x, y);
+
+ L = ivmLogLikelihood(model, x, y);
+
+ model = ivmOptimise(model, prior, display, innerIters, ...
+% 			     outerIters);
+
+ model = ivmOptimiseIVM(model, display)
+
+ model = ivmOptimiseKernel(model, prior, display, iters);
+
+ model = ivmOptimiseNoise(model, prior, display, iters);
+
+ y = ivmOut(model, x);
+
+ [gmu, gsigmavar] = ivmPosteriorGradMeanVar(model, X);
+
+ [mu, varsigma] = ivmPosteriorMeanVar(model, X);
+
+ model = ivmReconstruct(kern, noise, ivmInfo, X, y)
+
+ model = ivmRun(XTrain, yTrain, kernelType, noiseType, ...
+% 			selectionCriterion, dVal, prior, display, innerIters, ...
+% 			   outerIters, tieStructure)
+
+ [indexSelect, infoChange] = ivmSelectPoint(model);
+
+ model = ivmUpdateM(model, index)
+
+ model = ivmUpdateNuG(model, index)
+
+ model = ivmUpdateSites(model, index)
+
+ k = kernCompute(kern, x, x2)
+
+ kern = kernCreate(X, kernelType)
+
+ k = kernDiagCompute(kern, x, x2)
+
+ k = kernDiagGradX(kern, x, x2)
+
+ kernDisplay(kern)
+
+ kern = kernExpandParam(kern, params)
+
+ [params, names] = kernExtractParam(kern)
+
+ g = kernGradX(kern, x, x2)
+
+ g = kernGradient(kern, x, covGrad)
+
+ kern = kernParamInit(kern)
+
+ kern = kernTest(kernType);
+
+ kern = kernel(X, kernelType)
+
+ g = kernelGradient(params, model, prior)
+
+ f = kernelObjective(params, model, prior)
+
+ k = linKernCompute(kern, x, x2)
+
+ k = linKernDiagCompute(kern, x)
+
+ gX = linKernDiagGradX(kern, x)
+
+ linKernDisplay(kern)
+
+ kern = linKernExpandParam(kern, params)
+
+ params = linKernExtractParam(kern)
+
+ gX = linKernGradX(kern, x, X2)
+
+ g = linKernGradient(kern, x, covGrad)
+
+ kern = linKernParamInit(kern)
+
+ k = linardKernCompute(kern, x, x2)
+
+ k = linardKernDiagCompute(kern, x)
+
+ gX = linardKernDiagGradX(kern, x)
+
+ linardKernDisplay(kern)
+
+ kern = linardKernExpandParam(kern, params)
+
+ params = linardKernExtractParam(kern)
+
+ gX = linardKernGradX(kern, x, X2)
+
+ g = linardKernGradient(kern, x, covGrad)
+
+ kern = linardKernParamInit(kern)
+
+ y = lnCumGaussian(x)
+
+ [ld, U] = logdet(A, U)
+
+ L = mgaussianLikelihood(noise, mu, varsigma, y)
+
+ L = mgaussianLogLikelihood(noise, mu, varsigma, y)
+
+ mgaussianNoiseDisplay(noise)
+
+ noise = mgaussianNoiseExpandParam(noise, params)
+
+ [params, names] = mgaussianNoiseExtractParam(noise)
+
+ [dlnZ_dmu, dlnZ_dvs] = mgaussianNoiseGradVals(noise, mu, varsigma, y)
+
+ g = mgaussianNoiseGradientParam(noise, mu, varsigma, y)
+
+ y = mgaussianNoiseOut(noise, mu, varsigma)
+
+ noise = mgaussianNoiseParamInit(noise, y)
+
+ [k, innerProd, arg, denom, numer] = mlpKernCompute(kern, x, x2)
+
+ k = mlpKernDiagCompute(kern, x)
+
+ gX = mlpKernDiagGradX(kern, x)
+
+ mlpKernDisplay(kern)
+
+ kern = mlpKernExpandParam(kern, params)
+
+ params = mlpKernExtractParam(kern)
+
+ gX = mlpKernGradX(kern, x, x2)
+
+ g = mlpKernGradient(kern, x, covGrad)
+
+ kern = mlpKernParamInit(kern)
+
+ [k, innerProd, arg, denom, numer, vec] = mlpardKernCompute(kern, x, x2)
+
+ k = mlpardKernDiagCompute(kern, x)
+
+ gX = mlpardKernDiagGradX(kern, x)
+
+ mlpardKernDisplay(kern)
+
+ kern = mlpardKernExpandParam(kern, params)
+
+ params = mlpardKernExtractParam(kern)
+
+ gX = mlpardKernGradX(kern, x, X2)
+
+ g = mlpardKernGradient(kern, x, covGrad)
+
+ kern = mlpardKernParamInit(kern)
+
+ g = negIvmGradientNoise(params, model, prior)
+
+ e = negIvmLogLikelihood(params, model, prior)
+
+ y = negLogLogitTransform(x, transform)
+
+ g = negNoiseGradientParam(params, model, prior)
+
+ e = negNoiseLogLikelihood(params, model, prior)
+
+ y = ngaussian(x)
+
+ noise = noiseCreate(noiseType, y)
+
+ noiseDisplay(noise)
+
+ noise = noiseExpandParam(noise, params)
+
+ [params, names] = noiseExtractParam(noise)
+
+ [dlnZ_dmu, dlnZ_dvs] = noiseGradVals(noise, mu, varsigma, y)
+
+ g = noiseGradientParam(noise, mu, varsigma, y)
+
+ L = noiseLikelihood(noise, mu, varsigma, y);
+
+ L = noiseLogLikelihood(noise, mu, varsigma, y);
+
+ y = noiseOut(noise, mu, varsigma);
+
+ noise = noiseParamInit(noise, y)
+
+ noise = noiseTest(noiseType);
+
+ model = optimiseParams(component, optimiser, objective, ...
+%                                 gradient, options, model, prior);
+
+ L = orderedLikelihood(noise, mu, varsigma, y)
+
+ L = orderedLogLikelihood(noise, mu, varsigma, y)
+
+ orderedNoiseDisplay(noise)
+
+ noise = orderedNoiseExpandParam(noise, params)
+
+ [params, names] = orderedNoiseExtractParam(noise)
+
+ [dlnZ_dmu, dlnZ_dvs] = orderedNoiseGradVals(noise, mu, varsigma, y)
+
+ g = orderedNoiseGradientParam(noise, mu, varsigma, y)
+
+ y = orderedNoiseOut(noise, mu, varsigma)
+
+ noise = orderedNoiseParamInit(noise, y)
+
+ [Ainv, UC] = pdinv(A, UC);
+
+ L = probitLikelihood(noise, mu, varsigma, y)
+
+ L = probitLogLikelihood(noise, mu, varsigma, y)
+
+ probitNoiseDisplay(noise)
+
+ noise = probitNoiseExpandParam(noise, params)
+
+ [params, names] = probitNoiseExtractParam(noise)
+
+ [dlnZ_dmu, dlnZ_dvs] = probitNoiseGradVals(noise, mu, varsigma, y)
+
+ g = probitNoiseGradientParam(noise, mu, varsigma, y)
+
+ y = probitNoiseOut(noise, mu, varsigma)
+
+ noise = probitNoiseParamInit(noise, y)
+
+ [k, n2] = rbfKernCompute(kern, x, x2)
+
+ k = rbfKernDiagCompute(kern, x)
+
+ gX = rbfKernDiagGradX(kern, x)
+
+ rbfKernDisplay(kern)
+
+ kern = rbfKernExpandParam(kern, params)
+
+ params = rbfKernExtractParam(kern)
+
+ gX = rbfKernGradX(kern, x, x2)
+
+ g = rbfKernGradient(kern, x, covGrad)
+
+ kern = rbfKernParamInit(kern)
+
+ [k, n2] = rbfardKernCompute(kern, x, x2)
+
+ k = rbfardKernDiagCompute(kern, x)
+
+ gX = rbfardKernDiagGradX(kern, x)
+
+ rbfardKernDisplay(kern)
+
+ kern = rbfardKernExpandParam(kern, params)
+
+ params = rbfardKernExtractParam(kern)
+
+ gX = rbfardKernGradX(kern, x, X2)
+
+ g = rbfardKernGradient(kern, x, covGrad)
+
+ kern = rbfardKernParamInit(kern)
+
+ y = sigmoid(x)
+
+ y = sigmoidTransform(x, transform)
+
+ [k, rbfPart, n2] = sqexpKernCompute(kern, x, x2)
+
+ k = sqexpKernDiagCompute(kern, x)
+
+ gX = sqexpKernDiagGradX(kern, x)
+
+ sqexpKernDisplay(kern)
+
+ kern = sqexpKernExpandParam(kern, params)
+
+ [params, transform] = sqexpKernExtractParam(kern)
+
+ gX = sqexpKernGradX(kern, x, x2)
+
+ g = sqexpKernGradient(kern, x, covGrad)
+
+ kern = sqexpKernParamInit(kern)
+
+ k = whiteKernCompute(kern, x, x2)
+
+ k = whiteKernDiagCompute(kern, x)
+
+ gX = whiteKernDiagGradX(kern, x)
+
+ whiteKernDisplay(kern)
+
+ kern = whiteKernExpandParam(kern, params)
+
+ params = whiteKernExtractParam(kern)
+
+ gX = whiteKernGradX(kern, x, X2)
+
+ g = whiteKernGradient(kern, x, covGrad)
+
+ kern = whiteKernParamInit(kern)
+

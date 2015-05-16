@@ -1,0 +1,84 @@
+
+
+
+
+
+
+
+
+
+
+ model = ivm(X, y, kernelType, noiseType, selectionCriterion, d)
+
+ ivm3dPlot(model, plotType, iter, X, y)
+
+ model = ivmAddPoint(model, i)
+
+ delta = ivmComputeInfoChange(model, add)
+
+ g = ivmCovarianceGradient(invK, m)
+
+ [kern, noise, ivmInfo] = ivmDeconstruct(model, fileName)
+
+ ivmDisplay(model)
+
+ model = ivmDowndateNuG(model, index)
+
+ model = ivmDowndateSites(model, index)
+
+ model = ivmEpOptimise(model, prior, display, innerIters, ...
+% 			     outerIters, optimiseNoise);
+
+ model = ivmEpUpdateM(model, index)
+
+ model = ivmEpUpdatePoint(model, i)
+
+ g = ivmGradX(model, x, y);
+
+ model = ivmInit(model, d)
+
+ L = ivmLikelihoods(model, x, y);
+
+ [X, y, XTest, yTest] = ivmLoadData(dataset)
+
+ L = ivmLogLikelihood(model, x, y);
+
+ [X, Y, Z, varZ] = ivmMeshVals(model, limx, limy, number)
+
+ g = ivmNegGradientNoise(params, model, prior)
+
+ e = ivmNegLogLikelihood(params, model, prior)
+
+ model = ivmOptimise(model, prior, display, innerIters, ...
+% 			     outerIters, optimiseNoise);
+
+ model = ivmOptimiseIVM(model, display)
+
+ model = ivmOptimiseKernel(model, prior, display, iters);
+
+ model = ivmOptimiseNoise(model, prior, display, iters);
+
+ y = ivmOut(model, x);
+
+ [gmu, gsigmavar] = ivmPosteriorGradMeanVar(model, X);
+
+ [mu, varsigma] = ivmPosteriorMeanVar(model, X);
+
+ model = ivmReconstruct(kern, noise, ivmInfo, X, y)
+
+ model = ivmRun(XTrain, yTrain, kernelType, noiseType, ...
+% 			selectionCriterion, dVal, prior, display, innerIters, ...
+% 			   outerIters, kernelTieStructure, noiseTieStructure)
+
+ [indexSelect, infoChange] = ivmSelectPoint(model, add);
+
+ ivmSelectVisualise(model, display, k, dataIndexSelect)
+
+ ivmTwoDPlot(model, iter, X, y)
+
+ model = ivmUpdateM(model, index)
+
+ model = ivmUpdateNuG(model, index)
+
+ model = ivmUpdateSites(model, index)
+

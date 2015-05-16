@@ -1,0 +1,47 @@
+File versionlist for the IVM toolbox version 0.3 Friday, June 18, 2004 at 14:54:29
+
+demClassification1.m	 vs 1.11	 Wed Jun 16 09:57:39 2004
+demClassification2.m	 vs 1.8	 Wed Jun 16 10:16:17 2004
+demClassification3.m	 vs 	 
+demOrdered1.m	 vs 1.11	 Wed Jun 16 10:23:19 2004
+demOrdered2.m	 vs 1.1	 Wed Jun 16 10:23:30 2004
+demRegression1.m	 vs 1.7	 Wed Jun 16 10:17:32 2004
+demRegression2.m	 vs 1.3	 Wed Jun 16 11:56:59 2004
+demUsps1.m	 vs 1.2	 Thu Jun 10 08:02:43 2004
+demUsps2.m	 vs 1.2	 Thu Jun 10 08:02:52 2004
+demUsps3.m	 vs 1.1	 Wed May 19 03:13:50 2004
+ivm.m	 vs 1.9	 Mon Jun 14 10:36:04 2004
+ivm3dPlot.m	 vs 1.2	 Wed Jun 16 09:11:57 2004
+ivmAddPoint.m	 vs 1.5	 Fri Apr 23 17:24:05 2004
+ivmComputeInfoChange.m	 vs 1.1	 Wed Jun  9 18:56:25 2004
+ivmCovarianceGradient.m	 vs 1.1	 Wed Jun  9 18:58:02 2004
+ivmDeconstruct.m	 vs 1.1	 Mon Mar 15 20:57:49 2004
+ivmDisplay.m	 vs 1.1	 Thu Apr 22 02:26:25 2004
+ivmDowndateNuG.m	 vs 1.1	 Fri May 28 18:12:25 2004
+ivmDowndateSites.m	 vs 1.1	 Fri May 28 18:12:25 2004
+ivmEpOptimise.m	 vs 1.1	 Sat Jun 12 10:14:57 2004
+ivmEpUpdateM.m	 vs 1.2	 Sat Jun 12 11:10:26 2004
+ivmEpUpdatePoint.m	 vs 1.1	 Wed Jun  9 13:34:35 2004
+ivmGradX.m	 vs 1.4	 Fri Apr 23 02:01:40 2004
+ivmInit.m	 vs 1.5	 Tue May 18 23:25:49 2004
+ivmLikelihoods.m	 vs 1.3	 Sun Mar 21 23:42:42 2004
+ivmLoadData.m	 vs 1.3	 Wed Jun 16 16:00:49 2004
+ivmLogLikelihood.m	 vs 1.5	 Wed May 19 20:21:47 2004
+ivmMeshVals.m	 vs 1.3	 Wed Jun 16 08:55:44 2004
+ivmNegGradientNoise.m	 vs 1.2	 Fri Jun 18 13:50:25 2004
+ivmNegLogLikelihood.m	 vs 1.1	 Wed Jun  9 18:51:29 2004
+ivmOptimise.m	 vs 1.8	 Tue May 25 17:05:07 2004
+ivmOptimiseIVM.m	 vs 1.12	 Sat Jun 12 10:33:40 2004
+ivmOptimiseKernel.m	 vs 1.6	 Mon Jun 14 21:03:03 2004
+ivmOptimiseNoise.m	 vs 1.4	 Wed Jun  9 18:50:42 2004
+ivmOut.m	 vs 1.1	 Mon Apr  5 02:45:12 2004
+ivmPosteriorGradMeanVar.m	 vs 1.11	 Wed Jun  9 08:27:03 2004
+ivmPosteriorMeanVar.m	 vs 1.10	 Mon Jun 14 14:27:58 2004
+ivmReconstruct.m	 vs 1.6	 Wed Jun  9 08:26:40 2004
+ivmRun.m	 vs 1.3	 Wed Jun 16 11:07:46 2004
+ivmSelectPoint.m	 vs 1.3	 Wed Jun 16 16:08:59 2004
+ivmSelectVisualise.m	 vs 1.2	 Wed Jun 16 10:29:20 2004
+ivmTwoDPlot.m	 vs 1.2	 Mon Jun 14 10:39:35 2004
+ivmUpdateM.m	 vs 1.7	 Wed Jun 16 15:17:06 2004
+ivmUpdateNuG.m	 vs 1.7	 Tue May 25 16:56:48 2004
+ivmUpdateSites.m	 vs 1.6	 Tue May 18 23:25:49 2004
